@@ -38,18 +38,18 @@ void UParang_HealthSet::PostGameplayEffectExecute(
 			{
 				const FGameplayEffectContextHandle& EffectContext = 
 					Data.EffectSpec.GetEffectContext();
-				AActor* Instigator = EffectContext.GetOrigianlInstigator();
+				AActor* Instigator = EffectContext.GetOriginalInstigator();
 				AActor* Causer = EffectContext.GetEffectCauser();
 
 				OnDamageTaken.Broadcast(Instigator, Causer, 
-					Data.EffectSpec.CaptureSourceTags.GetSpecTags(),
+					Data.EffectSpec.CapturedSourceTags.GetSpecTags(),
 					Data.EvaluatedData.Magnitude);
 			}
 
 			if (GetShield() > 0.0f)
 			{
 				const float NewShield = GetShield() - InDamageDone;
-				InDamageDone -= GetSheild();
+				InDamageDone -= GetShield();
 				SetShield(FMath::Clamp(NewShield, 0.0f, GetMaxShield()));
 			}
 

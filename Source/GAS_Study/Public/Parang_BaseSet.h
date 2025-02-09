@@ -6,11 +6,11 @@
 #include "AttributeSet.h"
 #include "Parang_BaseSet.generated.h"
 
-#define ATTRIBUTE_ACCESSORS(ClassName, PropertyName)
-#define GAMEPLAYATTRIBUTE_PROPERTY_GETTER(ClassName, PropertyName)
-#define GAMEPLAYATTRIBUTE_VALUE_GETTER(PropertyName)
-#define GAMEPLAYATTRIBUTE_VALUE_SETTER(PropertyName)
-#define GAMEPLAYATTRIBUTE_VALUE_INITTER(PropertyName)
+#define ATTRIBUTE_ACCESSORS(ClassName, PropertyName) \
+	GAMEPLAYATTRIBUTE_PROPERTY_GETTER(ClassName, PropertyName) \
+	GAMEPLAYATTRIBUTE_VALUE_GETTER(PropertyName) \
+	GAMEPLAYATTRIBUTE_VALUE_SETTER(PropertyName) \
+	GAMEPLAYATTRIBUTE_VALUE_INITTER(PropertyName)
 
 /**
  * 
