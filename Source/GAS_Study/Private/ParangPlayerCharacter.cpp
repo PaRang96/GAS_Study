@@ -120,7 +120,7 @@ void AParangPlayerCharacter::SetupPlayerInputComponent(UInputComponent* PlayerIn
 			ULocalPlayer::GetSubsystem<UEnhancedInputLocalPlayerSubsystem>(
 				PlayerController->GetLocalPlayer()))
 		{
-			Subsystem->AddMappingContext(DefualtMappingContext, 0);
+			Subsystem->AddMappingContext(DefaultMappingContext, 0);
 		}
 	}
 	
